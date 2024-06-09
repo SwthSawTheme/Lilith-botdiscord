@@ -20,6 +20,15 @@ async def on_ready():
 @bot.slash_command(name="benca", description="Peça bença a mãe...")
 async def benca(ctx: discord.ApplicationContext):
     await commands.hello(ctx)
+    
+# Eventos de membros
+@bot.event
+async def on_member_join(member):
+    await commands.on_member_join(member)
+
+@bot.event
+async def on_member_remove(member):
+    await commands.on_member_remove(member)
 
 # Executar o bot
 bot.run(os.getenv('TOKEN'))

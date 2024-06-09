@@ -1,0 +1,6 @@
+DISPLAY_NAME=Lilith
+DESCRIPTION=Filha do odio
+MAIN=main.py
+MEMORY=512
+VERSION=recommended
+AUTORESTART=true

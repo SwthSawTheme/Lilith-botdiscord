@@ -1,4 +1,6 @@
 import discord
+import asyncio
+from datetime import timedelta
 
 async def hello(ctx: discord.ApplicationContext):
     embed = discord.Embed(
@@ -13,3 +15,25 @@ async def hello(ctx: discord.ApplicationContext):
     embed.set_image(url="https://images-ext-1.discordapp.net/external/c5eAZksU1MdpKAn9DyOxYjOZz_DdELNpj-pFF5W7uF8/https/sucodemanga.com.br/wp-content/uploads/2023/03/lilith-diablo-4-primeiro-gole.jpg?format=webp&width=1195&height=670")
  
     await ctx.respond(embed=embed)  # Enviar o embed com algum texto
+
+async def on_member_join(member):
+    channel = discord.utils.get(member.guild.channels, name="chat-geral")  # Altere para o nome do canal desejado
+    if channel:
+        embed = discord.Embed(
+            title="Novo Membro",
+            description=f"Bem-vindo(a) ao servidor, {member.mention}!",
+            color=discord.Colour.green()
+        )
+        embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
+        await channel.send(embed=embed)
+
+async def on_member_remove(member):
+    channel = discord.utils.get(member.guild.channels, name="chat-geral")  # Altere para o nome do canal desejado
+    if channel:
+        embed = discord.Embed(
+            title="Membro Saiu",
+            description=f"{member.name} saiu do servidor.",
+            color=discord.Colour.red()
+        )
+        embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
+        await channel.send(embed=embed)
