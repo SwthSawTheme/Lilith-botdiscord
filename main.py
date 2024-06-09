@@ -13,10 +13,12 @@ intents.message_content = True
 # Criar uma instância do bot com intents especificadas
 bot = discord.Bot(intents=intents)
 
+# Inicia o bot
 @bot.event
 async def on_ready():
     print(f"{bot.user} Caminha por santuario...")
 
+# Comandos de barra
 @bot.slash_command(name="benca", description="Peça bença a mãe...")
 async def benca(ctx: discord.ApplicationContext):
     await commands.hello(ctx)
