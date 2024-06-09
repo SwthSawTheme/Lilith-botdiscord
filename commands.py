@@ -17,7 +17,7 @@ async def hello(ctx: discord.ApplicationContext):
     await ctx.respond(embed=embed)  # Enviar o embed com algum texto
 
 async def on_member_join(member):
-    channel = discord.utils.get(member.guild.channels, name="chat-geral")  # Altere para o nome do canal desejado
+    channel = discord.utils.get(member.guild.channels, name="bem-vindo")  # Altere para o nome do canal desejado
     if channel:
         embed = discord.Embed(
             title="Novo Membro",
@@ -28,7 +28,7 @@ async def on_member_join(member):
         await channel.send(embed=embed)
 
 async def on_member_remove(member):
-    channel = discord.utils.get(member.guild.channels, name="chat-geral")  # Altere para o nome do canal desejado
+    channel = discord.utils.get(member.guild.channels, name="bem-vindo")  # Altere para o nome do canal desejado
     if channel:
         embed = discord.Embed(
             title="Membro Saiu",
