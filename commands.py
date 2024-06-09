@@ -20,20 +20,22 @@ async def on_member_join(member):
     channel = discord.utils.get(member.guild.channels, name="bem-vindo")  # Altere para o nome do canal desejado
     if channel:
         embed = discord.Embed(
-            title="Novo Membro",
+            title="Entrou no Santuario",
             description=f"Bem-vindo(a) ao servidor, {member.mention}!",
             color=discord.Colour.green()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
+        embed.set_image(url="https://www.gamespot.com/a/uploads/original/1816/18167535/4163070-diablo-4-season-1-prepare-season-of-the-malignant-guide-feat.jpg")
         await channel.send(embed=embed)
 
 async def on_member_remove(member):
     channel = discord.utils.get(member.guild.channels, name="bem-vindo")  # Altere para o nome do canal desejado
     if channel:
         embed = discord.Embed(
-            title="Membro Saiu",
+            title="O inferno queima...",
             description=f"{member.name} saiu do servidor.",
             color=discord.Colour.red()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
+        embed.set_image(url="https://t4.ftcdn.net/jpg/05/38/62/83/360_F_538628354_XsWtqxMtKLsWYriczpKCOdYmO9tG3RoD.jpg")
         await channel.send(embed=embed)
