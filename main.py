@@ -7,8 +7,7 @@ import commands
 load_dotenv()
 
 # Definir intents
-intents = discord.Intents.default()
-intents.message_content = True
+intents = discord.Intents.all()  # Habilitar todos os intents
 
 # Criar uma instância do bot com intents especificadas
 bot = discord.Bot(intents=intents)
