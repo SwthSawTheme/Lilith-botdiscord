@@ -37,5 +37,5 @@ async def on_member_remove(member):
             color=discord.Colour.red()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
-        embed.set_image(url="https://t4.ftcdn.net/jpg/05/38/62/83/360_F_538628354_XsWtqxMtKLsWYriczpKCOdYmO9tG3RoD.jpg")
+        embed.set_image(url="https://www.pcinvasion.com/wp-content/uploads/2022/12/diablo-iv-release-date-leaked.webp?fit=1200%2C675")
         await channel.send(embed=embed)
