@@ -25,17 +25,17 @@ async def on_member_join(member):
             color=discord.Colour.green()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
-        embed.set_image(url="https://image-1.uhdpaper.com/wallpaper/inarius-diablo-4-game-4k-wallpaper-uhdpaper.com-96@1@k.jpg")
+        embed.set_image(url="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS3VYjhbwgH8zWBipIRYf99DmBmknxdsCscKjpEoji-nbkhJ_sF")
         await channel.send(embed=embed)
 
 async def on_member_remove(member):
     channel = discord.utils.get(member.guild.channels, name="bem-vindo")  # Altere para o nome do canal desejado
     if channel:
         embed = discord.Embed(
-            title="Meu filho...sucumbiu a escuridão!",
+            title="Sucumbiu a escuridão!",
             description=f"{member.name} deixou santuario.",
             color=discord.Colour.red()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
-        embed.set_image(url="https://image-1.uhdpaper.com/wallpaper/diablo-4-game-4k-wallpaper-uhdpaper.com-93@1@k.jpg")
+        embed.set_image(url="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSdxR4_q4zUOsbxLN3e35lcQ3G5OlpJdP2Flniln58Jbk9Q_j2w")
         await channel.send(embed=embed)
