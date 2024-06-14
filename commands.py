@@ -21,11 +21,11 @@ async def on_member_join(member):
     if channel:
         embed = discord.Embed(
             title="Entrou no Santuario",
-            description=f"Bem-vindo(a) ao servidor, {member.mention}!",
+            description=f"Bem-vindo(a) ao santuario, {member.mention}!",
             color=discord.Colour.green()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
-        embed.set_image(url="https://www.gamespot.com/a/uploads/original/1816/18167535/4163070-diablo-4-season-1-prepare-season-of-the-malignant-guide-feat.jpg")
+        embed.set_image(url="https://image-1.uhdpaper.com/wallpaper/inarius-diablo-4-game-4k-wallpaper-uhdpaper.com-96@1@k.jpg")
         await channel.send(embed=embed)
 
 async def on_member_remove(member):
@@ -37,5 +37,5 @@ async def on_member_remove(member):
             color=discord.Colour.red()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
-        embed.set_image(url="https://www.pcinvasion.com/wp-content/uploads/2022/12/diablo-iv-release-date-leaked.webp?fit=1200%2C675")
+        embed.set_image(url="https://image-1.uhdpaper.com/wallpaper/diablo-4-game-4k-wallpaper-uhdpaper.com-93@1@k.jpg")
         await channel.send(embed=embed)
