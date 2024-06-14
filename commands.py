@@ -32,8 +32,8 @@ async def on_member_remove(member):
     channel = discord.utils.get(member.guild.channels, name="bem-vindo")  # Altere para o nome do canal desejado
     if channel:
         embed = discord.Embed(
-            title="O inferno queima...",
-            description=f"{member.name} saiu do servidor.",
+            title="Meu filho...sucumbiu a escuridão!",
+            description=f"{member.name} deixou santuario.",
             color=discord.Colour.red()
         )
         embed.set_thumbnail(url=member.avatar.url if member.avatar else member.default_avatar.url)
